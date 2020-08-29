@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tobias Budig (Posts about Pandas)</title><link>https://tobias-budig.com/</link><description></description><atom:link href="https://tobias-budig.com/categories/pandas.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:hello@tobias-budig.com"&gt;Tobias Budig&lt;/a&gt; </copyright><lastBuildDate>Thu, 30 Jul 2020 08:27:57 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Keeping Pandas DataFrames clean when importing JSON (with Context Managers)</title><link>https://tobias-budig.com/posts/keeping-pandas-dataframes-clean-importing-json/</link><dc:creator>Tobias Budig</dc:creator><description>&lt;div&gt;&lt;p&gt;At &lt;a href="https://firstmomentum.vc"&gt;First Momentum&lt;/a&gt;, I do a lot of data analysis to find the most promising young startups.
+As a first step, you always have to import the desired data into a Pandas DataFrame
+and do some preprocessing, for example by importing JSON data from some API. 
+When doing this kind of pre-processing,
+you usually have a lot of temporary columns in your DataFrame that get imported but need to be dropped later in the process.
+To deal with these temporary columns,
+I built a custom Context Manager that keeps track of all imported columns
+and deletes them when you're done.
+This way, your code stays lean and you don't have to remove temporary columns yourself.
+In this short article, I will show how you can keep your pre-processing clean
+and use a Python ContextManager to clean up temporary columns.
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://tobias-budig.com/posts/keeping-pandas-dataframes-clean-importing-json/"&gt;Read more…&lt;/a&gt; (3 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>Clean Code</category><category>Machine Learning</category><category>Pandas</category><category>Python</category><category>Tech</category><guid>https://tobias-budig.com/posts/keeping-pandas-dataframes-clean-importing-json/</guid><pubDate>Sun, 03 Mar 2019 09:30:13 GMT</pubDate></item></channel></rss>

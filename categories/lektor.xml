@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tobias Budig (Posts about Lektor)</title><link>https://tobias-budig.com/</link><description></description><atom:link href="https://tobias-budig.com/categories/lektor.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:hello@tobias-budig.com"&gt;Tobias Budig&lt;/a&gt; </copyright><lastBuildDate>Thu, 30 Jul 2020 08:27:57 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>Switching from Lektor to Nikola (static site generators)</title><link>https://tobias-budig.com/posts/switch-from-lektor-to-nikola/</link><dc:creator>Tobias Budig</dc:creator><description>&lt;div&gt;&lt;p&gt;I decided to migrate this website/blog from Lektor to Nikola.
+Both are static site generators 
+implemented in Python 
+that allow you to generate a static, secure, and maintenance-free website/blog.
+Here is my experience, why I did it, how to do it, and what to expect.
+In short: While I liked Lektor for its simplicity,
+it lacked several features I needed.
+So far, Nikola has these features and many more
+which is why I'm very happy to have switched.
+Read the rest of the pros and cons here.
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://tobias-budig.com/posts/switch-from-lektor-to-nikola/"&gt;Read more…&lt;/a&gt; (5 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>Lektor</category><category>Nikola</category><category>Python</category><category>Tech</category><guid>https://tobias-budig.com/posts/switch-from-lektor-to-nikola/</guid><pubDate>Tue, 10 Mar 2020 16:03:35 GMT</pubDate></item></channel></rss>
