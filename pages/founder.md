@@ -50,4 +50,5 @@ In my second semester as physics student in Göttingen I assist in experiments i
 - performing experiments with Rahman microscope
 - data analysis with python
 
-# Internship, QX Quarterly Crossing
+# Internship, QX Quarterly Crossing, Frankfurt
+
