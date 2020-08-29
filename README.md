@@ -1,8 +1,8 @@
-# karllorey.com
+# tobias-budig.com
 
-[![Build Status](https://travis-ci.org/lorey/karllorey.com.svg?branch=master)](https://travis-ci.org/lorey/karllorey.com)
+[![Build Status](https://travis-ci.org/tobiasbudig/personal-website.svg?branch=master)](https://travis-ci.org/tobiasbudig/personal-website)
 
-The [personal site of Karl Lorey](https://karllorey.com). That would be me.
+The [personal site of Tobias Budig](https://tobias-budig.com). That would be me.
 Built with minimalism in mind and Nikola.
 
 ## Test it

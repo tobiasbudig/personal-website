@@ -3,9 +3,9 @@ name = subpages
 module = subpages
 
 [Documentation]
-author = Karl Lorey
+author = Tobias Budig
 version = 0.1
-website = https://karlloreycom
+website = https://tobias-budig.com
 description = List Subpages
 
 [Nikola]
