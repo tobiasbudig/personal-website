@@ -18,11 +18,6 @@ If you'd like to see a traditional overview of my work experience,
 feel free to also take a look at [my resumé](https://github.com/lorey/resume) or [my Linkedin profile](https://www.linkedin.com/in/karllorey).
 If you're more interested in the technological aspects of my work, check out [Techie for a description of my stack and academic background](/techie) and [Maker containing my portfolio](/portfolio)
 
-# Founder, Budig Digital UG
-With [Budig Digital UG](https://budig.digital), I want to help my customers to identify the potential of digital tools.
-
-- setting up an executing a Venture Capital fund, raising 5 million Euros from investors in the process
-- designing and implementing a crawler network spotting every early-stage startup in the DACH region resulting in a competitive advantage
 
 # CTO, MUN Command
 [MUN Command](https://www.muncommand.com) is the all-in-one solution for chairs, delegates and organizers, combinig chairing software, live polling, chat and conference management. It is a conferencing software for Model United Nation (MUN) conferences. rI am responsable for the tech stack decsitions and backend programming. In addition, I bring startup methodes in the team and give internal workshops.
