@@ -7,11 +7,11 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <url>
   <loc>https://tobias-budig.com/</loc>
-  <lastmod>2020-08-31T22:12:00Z</lastmod>
+  <lastmod>2020-08-31T22:15:00Z</lastmod>
  </url>
  <url>
   <loc>https://tobias-budig.com/archive.html</loc>
-  <lastmod>2020-08-31T22:12:00Z</lastmod>
+  <lastmod>2020-08-31T22:15:00Z</lastmod>
  </url>
  <url>
   <loc>https://tobias-budig.com/blog/</loc>
@@ -24,6 +24,10 @@
  <url>
   <loc>https://tobias-budig.com/founder/</loc>
   <lastmod>2020-06-05T17:35:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://tobias-budig.com/impressum/</loc>
+  <lastmod>2020-08-31T22:15:00Z</lastmod>
  </url>
  <url>
   <loc>https://tobias-budig.com/legal/</loc>

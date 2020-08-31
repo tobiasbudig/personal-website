@@ -1,6 +1,6 @@
 <!--
 .. title: Impressum
-.. slug: legal
+.. slug: impressum
 .. date: 2020-08-30 11:03:11 UTC+01:00
 .. tags: 
 .. category: 
