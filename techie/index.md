@@ -9,7 +9,7 @@
 .. type: text
 -->
 
-I'm a self-taught progammer since highschool. At the beginning I startet lerning via YouTube, later I learned web-development from Udemy and personal projects. My theoretical background comes from my studies of Physics and computer science cources at university. Here I learned, in adition, more about machine learning. 
+I'm a self-taught progammer since highschool. At the beginning I startet learning via YouTube, later I learned web-development from Udemy and personal projects. My theoretical background comes from my studies in Physics and computer science cources at university. Here I learned, in adition, more about machine learning. 
 This page is about my academic and technical background, 
 projects [can be found elsewhere](/founder).
 
