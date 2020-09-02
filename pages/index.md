@@ -16,4 +16,4 @@ During his studies he is working as an IT freelancer and started building [MUN C
 
 This page is adoped from the genius [Karl Lorey](https://karllorey.com/) and is heavily inspired by the beautiful page of [Kennetz Reitz](https://www.kennethreitz.org/) and
 [The Minimalists](https://www.theminimalists.com/). It is built with [Nikola](https://getnikola.com/) and its
-[code is available on GitHub](https://github.com/lorey/karllorey.com).
+[code is available on GitHub](https://github.com/tobiasbudig/personal-website).
