@@ -63,6 +63,9 @@ We want to train a neu">
             <li class="nav-link">
                 <a href="../../techie/">Techie</a>
             </li>
+            <li class="nav-link&gt;
+                &lt;a href=">Blog
+            </li>
         </ul></nav></header><main id="content" class="page"><hr style="margin-bottom: 50px">
 <article class="post-text h-entry hentry postpage" itemscope="itemscope" itemtype="http://schema.org/Article"><header><h1 class="p-name entry-title" itemprop="headline name"><a href="." class="u-url">In 5 easy steps to your first deep learning model</a></h1>
 
@@ -150,7 +153,7 @@ A place to found a range of datasets is <a href="https://www.kaggle.com">Kaggle<
 
 
 <p>Output:
-<img alt="Result show batch" src="https://tobias-budig.com/img/result-show-batch.png" title="Result show batch"></p>
+<img alt="Result show batch" src="https://tobias-budig.com/img/result-show-batch.png" title="Result show batch" width="100%"></p>
 <p>Next, we train the convolutional neural network (CNN), a special type of neural network that is particularly suitable for image data.  In addition, we use a pre-trained model <a href="https://www.kaggle.com/pytorch/resnet18">("Resnet18")</a> to get better resultes quickly and set the target metric to the error rate in the validation set.</p>
 <pre class="code literal-block"><span></span><code><span class="n">learn</span> <span class="o">=</span> <span class="n">cnn_learner</span><span class="p">(</span><span class="n">dls</span><span class="p">,</span> <span class="n">resnet18</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="n">error_rate</span><span class="p">)</span>
 </code></pre>
@@ -162,7 +165,7 @@ A place to found a range of datasets is <a href="https://www.kaggle.com">Kaggle<
 
 
 <p>Output
-<img alt="Result train process" src="https://tobias-budig.com/img/result-train-nn.png" title="Result train process" width="66%"></p>
+<img alt="Result train process" src="https://tobias-budig.com/img/result-train-nn.png" title="Result train process" width="100%"></p>
 <p>In this example, an accuracy of over 97% is achieved.</p>
 <p>A more precise evaluation provides 13 false negative and 20 false positive of a total of 1171 images</p>
 <pre class="code literal-block"><span></span><code><span class="n">interp</span> <span class="o">=</span> <span class="n">ClassificationInterpretation</span><span class="o">.</span><span class="n">from_learner</span><span class="p">(</span><span class="n">learn</span><span class="p">)</span>
@@ -171,7 +174,7 @@ A place to found a range of datasets is <a href="https://www.kaggle.com">Kaggle<
 
 
 <p>Output:
-<img alt="Confusion matrix to evaluate performance" src="https://tobias-budig.com/img/result-matrix.png" title="Confusion matrix to evaluate performance" width="66%"></p>
+<img alt="Confusion matrix to evaluate performance" src="https://tobias-budig.com/img/result-matrix.png" title="Confusion matrix to evaluate performance" width="100%"></p>
 <p>The top 5 images where the model is most uncertain can be viewed above this command and any incorrectly forked data can be identified.</p>
 <pre class="code literal-block"><span></span><code><span class="n">interp</span><span class="o">.</span><span class="n">plot_top_losses</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 </code></pre>
