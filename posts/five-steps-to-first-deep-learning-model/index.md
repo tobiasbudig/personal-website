@@ -95,7 +95,8 @@ Now, we can watch in the preperad data by looking at the first four pictures fro
 dls.valid.show_batch(max_n=4, nrows=1)
 ```
 
-![Result show batch](https://tobias-budig.com/img/result-show-batch.png)
+Output:
+![Result show batch](https://tobias-budig.com/img/result-show-batch.png "Result show batch")
 
 Next, we train the convolutional neural network (CNN), a special type of neural network that is particularly suitable for image data.  In addition, we use a pre-trained model [("Resnet18")](https://www.kaggle.com/pytorch/resnet18) to get better resultes quickly and set the target metric to the error rate in the validation set.
 
@@ -109,7 +110,8 @@ The learning process takes longer or shorter depending on the computer. After th
 learn.fine_tune(2)
 ```
 
-![Result train process](https://tobias-budig.com/img/result-train-nn.png)
+Output
+![Result train process](https://tobias-budig.com/img/result-train-nn.png "Result train process")
 
 In this example, an accuracy of over 97% is achieved.
 
@@ -120,7 +122,8 @@ interp = ClassificationInterpretation.from_learner(learn)
 interp.plot_confusion_matrix()
 ```
 
-![Confusion matrix to evaluate performance](https://tobias-budig.com/img/result-matrix.png)
+Output:
+![Confusion matrix to evaluate performance](https://tobias-budig.com/img/result-matrix.png "Confusion matrix to evaluate performance")
 
 The top 5 images where the model is most uncertain can be viewed above this command and any incorrectly forked data can be identified.
 
