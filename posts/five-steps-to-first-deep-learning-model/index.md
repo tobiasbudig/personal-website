@@ -2,13 +2,14 @@
 .. title: In 5 easy steps to your first deep learning model
 .. slug: five-steps-to-first-deep-learning-model
 .. date: 2020-11-16 10:30:13 UTC+01:00
-.. tags: AI, Python, Learning
-.. category: Programming
+.. tags: AI, Python, Learning, Tech
+.. category: Tech
 .. link: 
 .. description: 
 .. type: text
-.. status: draft
+.. status: 
 -->
+
 
 With fast.ai everyone can train their own deep learning model. Only 5 steps are necessary.
 
@@ -24,7 +25,7 @@ We want to train a neural network to help doctors detect pneumonia from x-rays. 
 ### 1. Find a dataset
 
 Without data there is no machine learning - that is clear. Since we want to classify image data in this example, there are several ways to get a data set.
-
+<!-- status: draft-->
 - You already have data. In the example if you are a radiologists.
 - Collect images from the internet ("scrapping")
 - Use public data sets

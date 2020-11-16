@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="../assets/xml/rss.xsl" media="all"?><rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Tobias Budig (Posts about AI)</title><link>https://tobias-budig.com/</link><description></description><atom:link href="https://tobias-budig.com/categories/ai.xml" rel="self" type="application/rss+xml"></atom:link><language>en</language><copyright>Contents © 2020 &lt;a href="mailto:hello@tobias-budig.com"&gt;Tobias Budig&lt;/a&gt; </copyright><lastBuildDate>Mon, 16 Nov 2020 16:36:59 GMT</lastBuildDate><generator>Nikola (getnikola.com)</generator><docs>http://blogs.law.harvard.edu/tech/rss</docs><item><title>In 5 easy steps to your first deep learning model</title><link>https://tobias-budig.com/posts/five-steps-to-first-deep-learning-model/</link><dc:creator>Tobias Budig</dc:creator><description>&lt;div&gt;&lt;p&gt;With fast.ai everyone can train their own deep learning model. Only 5 steps are necessary.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Find a dataset&lt;/li&gt;
+&lt;li&gt;Make data available in code&lt;/li&gt;
+&lt;li&gt;Prepare data&lt;/li&gt;
+&lt;li&gt;Training of the model&lt;/li&gt;
+&lt;li&gt;Use it&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We want to train a neural network to help doctors detect pneumonia from x-rays.  We will go through the process step by step. The learning success is best if you type the lines yourself.
+&lt;/p&gt;&lt;p&gt;&lt;a href="https://tobias-budig.com/posts/five-steps-to-first-deep-learning-model/"&gt;Read more…&lt;/a&gt; (4 min remaining to read)&lt;/p&gt;&lt;/div&gt;</description><category>AI</category><category>Learning</category><category>Python</category><category>Tech</category><guid>https://tobias-budig.com/posts/five-steps-to-first-deep-learning-model/</guid><pubDate>Mon, 16 Nov 2020 09:30:13 GMT</pubDate></item></channel></rss>
