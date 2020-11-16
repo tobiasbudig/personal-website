@@ -43,7 +43,7 @@ from fastai import *
 
 After importing the library, we check whether the directory with the training data is located in the right place. If not already done, the downloaded folder has to be unzipped and moved into the folder with the Jupiter notebook.
 
-```python
+```console
 !ls
 ```
 
@@ -68,11 +68,16 @@ Next, we crate a DataBlock which contains information about our data and for the
 
 ```python
 xrays = DataBlock(
-    blocks=(ImageBlock, CategoryBlock), # indicates that our input data are images and our predictions are categories
-    get_items=get_image_files, # specifies the input data as images from the provided path
-    splitter=RandomSplitter(valid_pct=0.2, seed=42), # splitting the dataset in train and validationset randomy with seed 42
-    get_y=parent_label, # sets the label as the name of the partent directory 
-    item_tfms=Resize(128) # resizes images to 128px x 128px
+    # indicates that our input data are images and our predictions are categories
+    blocks=(ImageBlock, CategoryBlock),
+    # specifies the input data as images from the provided path
+    get_items=get_image_files,
+    # splitting the dataset in train and validationset randomy with seed 42
+    splitter=RandomSplitter(valid_pct=0.2, seed=42),
+    # sets the label as the name of the partent directory
+    get_y=parent_label,
+    # resizes images to 128px x 128px
+    item_tfms=Resize(128)
 )
 ```
 
@@ -90,7 +95,7 @@ Now, we can watch in the preperad data by looking at the first four pictures fro
 dls.valid.show_batch(max_n=4, nrows=1)
 ```
 
-![Result show batch](./img/result-show-batch.png)
+![Result show batch](../img/result-show-batch.png)
 
 Next, we train the convolutional neural network (CNN), a special type of neural network that is particularly suitable for image data.  In addition, we use a pre-trained model [("Resnet18")](https://www.kaggle.com/pytorch/resnet18) to get better resultes quickly and set the target metric to the error rate in the validation set.
 
@@ -104,7 +109,7 @@ The learning process takes longer or shorter depending on the computer. After th
 learn.fine_tune(2)
 ```
 
-![Result train process](./img/result-train-nn.png)
+![Result train process](../img/result-train-nn.png)
 
 In this example, an accuracy of over 97% is achieved.
 
@@ -115,7 +120,7 @@ interp = ClassificationInterpretation.from_learner(learn)
 interp.plot_confusion_matrix()
 ```
 
-![Confusion matrix to evaluate performance](./img/result-matrix.png)
+![Confusion matrix to evaluate performance](../img/result-matrix.png)
 
 The top 5 images where the model is most uncertain can be viewed above this command and any incorrectly forked data can be identified.
 
@@ -145,3 +150,4 @@ result = f"Predictions: {pred}; Probability: {probs[pred_idx]:.04f}"
 result
 ```
 
+See the repo here on [GitHub](https://github.com/tobiasbudig/x-ray-chest-analysis).
