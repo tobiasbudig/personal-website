@@ -104,23 +104,26 @@ A place to found a range of datasets is <a href="https://www.kaggle.com">Kaggle<
 </pre>
 
 <p>After importing the library, we check whether the directory with the training data is located in the right place. If not already done, the downloaded folder has to be unzipped and moved into the folder with the Jupiter notebook.</p>
-<pre class="code literal-block"><span class="go">!ls</span>
-</pre>
+<pre class="code literal-block"><span></span><code><span class="sx">!ls</span>
+</code></pre>
+
 
 <p>We can now see that the folder is in the right place. After that we set the path to the images and check a second time if everything worked out fine.</p>
-<pre class="code literal-block"><span class="n">Path</span><span class="o">.</span><span class="n">BASE_PATH</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">'./chest_xray_data/'</span><span class="p">)</span>
+<pre class="code literal-block"><span></span><code><span class="n">Path</span><span class="o">.</span><span class="n">BASE_PATH</span> <span class="o">=</span> <span class="n">Path</span><span class="p">(</span><span class="s1">'./chest_xray_data/'</span><span class="p">)</span>
 <span class="n">path</span> <span class="o">=</span> <span class="n">Path</span><span class="o">.</span><span class="n">BASE_PATH</span>
 <span class="n">Path</span><span class="o">.</span><span class="n">BASE_PATH</span><span class="o">.</span><span class="n">ls</span><span class="p">()</span>
-</pre>
+</code></pre>
+
 
 <h4>3. Prepare data</h4>
 <p>Because we process images. Let's first check if there are files in the image folder that are not images and could later lead to errors.</p>
-<pre class="code literal-block"><span class="n">fns</span> <span class="o">=</span> <span class="n">get_image_files</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+<pre class="code literal-block"><span></span><code><span class="n">fns</span> <span class="o">=</span> <span class="n">get_image_files</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
 <span class="n">fns</span>
-</pre>
+</code></pre>
+
 
 <p>Next, we crate a DataBlock which contains information about our data and for the train process later.</p>
-<pre class="code literal-block"><span class="n">xrays</span> <span class="o">=</span> <span class="n">DataBlock</span><span class="p">(</span>
+<pre class="code literal-block"><span></span><code><span class="n">xrays</span> <span class="o">=</span> <span class="n">DataBlock</span><span class="p">(</span>
     <span class="c1"># indicates that our input data are images and our predictions are categories</span>
     <span class="n">blocks</span><span class="o">=</span><span class="p">(</span><span class="n">ImageBlock</span><span class="p">,</span> <span class="n">CategoryBlock</span><span class="p">),</span>
     <span class="c1"># specifies the input data as images from the provided path</span>
@@ -132,52 +135,62 @@ A place to found a range of datasets is <a href="https://www.kaggle.com">Kaggle<
     <span class="c1"># resizes images to 128px x 128px</span>
     <span class="n">item_tfms</span><span class="o">=</span><span class="n">Resize</span><span class="p">(</span><span class="mi">128</span><span class="p">)</span>
 <span class="p">)</span>
-</pre>
+</code></pre>
+
 
 <h4>4. Training</h4>
 <p>Surprisingly, most of the work is inside the preparation. After the structure of the network has been defined (Datablock) and linked to the training data (Dataloader), we are ready.</p>
-<pre class="code literal-block"><span class="n">dls</span> <span class="o">=</span> <span class="n">xrays</span><span class="o">.</span><span class="n">dataloaders</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
-</pre>
+<pre class="code literal-block"><span></span><code><span class="n">dls</span> <span class="o">=</span> <span class="n">xrays</span><span class="o">.</span><span class="n">dataloaders</span><span class="p">(</span><span class="n">path</span><span class="p">)</span>
+</code></pre>
+
 
 <p>Now, we can watch in the preperad data by looking at the first four pictures from the first batch.</p>
-<pre class="code literal-block"><span class="n">dls</span><span class="o">.</span><span class="n">valid</span><span class="o">.</span><span class="n">show_batch</span><span class="p">(</span><span class="n">max_n</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</pre>
+<pre class="code literal-block"><span></span><code><span class="n">dls</span><span class="o">.</span><span class="n">valid</span><span class="o">.</span><span class="n">show_batch</span><span class="p">(</span><span class="n">max_n</span><span class="o">=</span><span class="mi">4</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre>
 
-<p><img alt="Result show batch" src="../img/result-show-batch.png"></p>
+
+<p><img alt="Result show batch" src="https://tobias-budig.com/img/result-show-batch.png"></p>
 <p>Next, we train the convolutional neural network (CNN), a special type of neural network that is particularly suitable for image data.  In addition, we use a pre-trained model <a href="https://www.kaggle.com/pytorch/resnet18">("Resnet18")</a> to get better resultes quickly and set the target metric to the error rate in the validation set.</p>
-<pre class="code literal-block"><span class="n">learn</span> <span class="o">=</span> <span class="n">cnn_learner</span><span class="p">(</span><span class="n">dls</span><span class="p">,</span> <span class="n">resnet18</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="n">error_rate</span><span class="p">)</span>
-</pre>
+<pre class="code literal-block"><span></span><code><span class="n">learn</span> <span class="o">=</span> <span class="n">cnn_learner</span><span class="p">(</span><span class="n">dls</span><span class="p">,</span> <span class="n">resnet18</span><span class="p">,</span> <span class="n">metrics</span><span class="o">=</span><span class="n">error_rate</span><span class="p">)</span>
+</code></pre>
+
 
 <p>The learning process takes longer or shorter depending on the computer. After the first run, however, the model already reaches over 90% accuracy. The error rate can be further reduced by more training</p>
-<pre class="code literal-block"><span class="n">learn</span><span class="o">.</span><span class="n">fine_tune</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
-</pre>
+<pre class="code literal-block"><span></span><code><span class="n">learn</span><span class="o">.</span><span class="n">fine_tune</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</code></pre>
 
-<p><img alt="Result train process" src="../img/result-train-nn.png"></p>
+
+<p><img alt="Result train process" src="https://tobias-budig.com/img/result-train-nn.png"></p>
 <p>In this example, an accuracy of over 97% is achieved.</p>
 <p>A more precise evaluation provides 13 false negative and 20 false positive of a total of 1171 images</p>
-<pre class="code literal-block"><span class="n">interp</span> <span class="o">=</span> <span class="n">ClassificationInterpretation</span><span class="o">.</span><span class="n">from_learner</span><span class="p">(</span><span class="n">learn</span><span class="p">)</span>
+<pre class="code literal-block"><span></span><code><span class="n">interp</span> <span class="o">=</span> <span class="n">ClassificationInterpretation</span><span class="o">.</span><span class="n">from_learner</span><span class="p">(</span><span class="n">learn</span><span class="p">)</span>
 <span class="n">interp</span><span class="o">.</span><span class="n">plot_confusion_matrix</span><span class="p">()</span>
-</pre>
+</code></pre>
 
-<p><img alt="Confusion matrix to evaluate performance" src="../img/result-matrix.png"></p>
+
+<p><img alt="Confusion matrix to evaluate performance" src="https://tobias-budig.com/img/result-matrix.png"></p>
 <p>The top 5 images where the model is most uncertain can be viewed above this command and any incorrectly forked data can be identified.</p>
-<pre class="code literal-block"><span class="n">interp</span><span class="o">.</span><span class="n">plot_top_losses</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-</pre>
+<pre class="code literal-block"><span></span><code><span class="n">interp</span><span class="o">.</span><span class="n">plot_top_losses</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">nrows</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+</code></pre>
+
 
 <p>Finally, we can save the model for later use without training again.</p>
-<pre class="code literal-block"><span class="n">learn</span><span class="o">.</span><span class="n">export</span><span class="p">()</span>
-</pre>
+<pre class="code literal-block"><span></span><code><span class="n">learn</span><span class="o">.</span><span class="n">export</span><span class="p">()</span>
+</code></pre>
+
 
 <h4>5. Apply</h4>
 <p>We can import the saved model </p>
-<pre class="code literal-block"><span class="n">learn_inf</span> <span class="o">=</span> <span class="n">load_learner</span><span class="p">(</span><span class="s2">"./export.pkl"</span><span class="p">)</span>
-</pre>
+<pre class="code literal-block"><span></span><code><span class="n">learn_inf</span> <span class="o">=</span> <span class="n">load_learner</span><span class="p">(</span><span class="s2">"./export.pkl"</span><span class="p">)</span>
+</code></pre>
+
 
 <p>and use the neural network to predict a new image.</p>
-<pre class="code literal-block"><span class="n">pred</span><span class="p">,</span> <span class="n">pred_idx</span><span class="p">,</span> <span class="n">probs</span> <span class="o">=</span> <span class="n">learn_inf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+<pre class="code literal-block"><span></span><code><span class="n">pred</span><span class="p">,</span> <span class="n">pred_idx</span><span class="p">,</span> <span class="n">probs</span> <span class="o">=</span> <span class="n">learn_inf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
 <span class="n">result</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"Predictions: </span><span class="si">{</span><span class="n">pred</span><span class="si">}</span><span class="s2">; Probability: </span><span class="si">{</span><span class="n">probs</span><span class="p">[</span><span class="n">pred_idx</span><span class="p">]</span><span class="si">:</span><span class="s2">.04f</span><span class="si">}</span><span class="s2">"</span>
 <span class="n">result</span>
-</pre>
+</code></pre>
+
 
 <p>See the repo here on <a href="https://github.com/tobiasbudig/x-ray-chest-analysis">GitHub</a>.</p>
 </div>
