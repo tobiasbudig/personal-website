@@ -198,6 +198,34 @@ A place to found a range of datasets is <a href="https://www.kaggle.com">Kaggle<
 </code></pre>
 
 
+<h4>Bonus</h4>
+<p>This snippet creates a widget to upload a imgage which is than classified.</p>
+<pre class="code literal-block"><span></span><code><span class="kn">from</span> <span class="nn">ipywidgets</span> <span class="kn">import</span> <span class="n">VBox</span>
+<span class="n">btn_upload</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">FileUpload</span><span class="p">()</span>
+<span class="n">out_pl</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Output</span><span class="p">()</span>
+<span class="n">lbl_pred</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">()</span>
+<span class="n">btn_run</span> <span class="o">=</span> <span class="n">widgets</span><span class="o">.</span><span class="n">Button</span><span class="p">(</span><span class="n">description</span><span class="o">=</span><span class="s2">"Classify"</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">on_click_classify</span><span class="p">(</span><span class="n">change</span><span class="p">):</span>
+    <span class="n">img</span> <span class="o">=</span> <span class="n">PILImage</span><span class="o">.</span><span class="n">create</span><span class="p">(</span><span class="n">btn_upload</span><span class="o">.</span><span class="n">data</span><span class="p">[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+
+    <span class="n">out_pl</span><span class="o">.</span><span class="n">clear_output</span><span class="p">()</span>
+    <span class="k">with</span> <span class="n">out_pl</span><span class="p">:</span> <span class="n">display</span><span class="p">(</span><span class="n">img</span><span class="o">.</span><span class="n">to_thumb</span><span class="p">(</span><span class="mi">128</span><span class="p">,</span> <span class="mi">128</span><span class="p">))</span>
+
+    <span class="c1">#get predictions</span>
+    <span class="n">pred</span><span class="p">,</span> <span class="n">pred_idx</span><span class="p">,</span> <span class="n">probs</span> <span class="o">=</span> <span class="n">learn_inf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
+
+
+    <span class="n">lbl_pred</span><span class="o">.</span><span class="n">value</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">"Predictions: </span><span class="si">{</span><span class="n">pred</span><span class="si">}</span><span class="s2">; Probability: </span><span class="si">{</span><span class="n">probs</span><span class="p">[</span><span class="n">pred_idx</span><span class="p">]</span><span class="si">:</span><span class="s2">.04f</span><span class="si">}</span><span class="s2">"</span>
+    <span class="n">lbl_pred</span>
+
+<span class="n">btn_run</span><span class="o">.</span><span class="n">on_click</span><span class="p">(</span><span class="n">on_click_classify</span><span class="p">)</span>
+<span class="n">VBox</span><span class="p">([</span><span class="n">widgets</span><span class="o">.</span><span class="n">Label</span><span class="p">(</span><span class="s2">"Select Image"</span><span class="p">),</span> <span class="n">btn_upload</span><span class="p">,</span> <span class="n">btn_run</span><span class="p">,</span> <span class="n">out_pl</span><span class="p">,</span> <span class="n">lbl_pred</span><span class="p">])</span>
+<span class="n">result</span>
+</code></pre>
+
+
+<p>Now, we are done and have simple classifier to support dotors!</p>
 <p>See the repo here on <a href="https://github.com/tobiasbudig/x-ray-chest-analysis">GitHub</a>.</p>
 </div>
     </div>
