@@ -11,7 +11,7 @@
  </url>
  <url>
   <loc>https://tobias-budig.com/archive.html</loc>
-  <lastmod>2020-11-22T16:10:00Z</lastmod>
+  <lastmod>2020-11-22T16:24:00Z</lastmod>
  </url>
  <url>
   <loc>https://tobias-budig.com/blog/</loc>
@@ -19,7 +19,7 @@
  </url>
  <url>
   <loc>https://tobias-budig.com/categories/</loc>
-  <lastmod>2020-11-16T16:37:00Z</lastmod>
+  <lastmod>2020-11-22T16:24:00Z</lastmod>
  </url>
  <url>
   <loc>https://tobias-budig.com/categories/ai/</loc>
@@ -32,6 +32,10 @@
  <url>
   <loc>https://tobias-budig.com/categories/learning/</loc>
   <lastmod>2020-11-16T16:36:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://tobias-budig.com/categories/paper/</loc>
+  <lastmod>2020-11-22T16:24:00Z</lastmod>
  </url>
  <url>
   <loc>https://tobias-budig.com/categories/python/</loc>
@@ -52,6 +56,10 @@
  <url>
   <loc>https://tobias-budig.com/posts/five-steps-to-first-deep-learning-model/</loc>
   <lastmod>2020-11-16T16:31:00Z</lastmod>
+ </url>
+ <url>
+  <loc>https://tobias-budig.com/posts/trade-off-exml-ppml/</loc>
+  <lastmod>2020-11-22T16:24:00Z</lastmod>
  </url>
  <url>
   <loc>https://tobias-budig.com/techie/</loc>

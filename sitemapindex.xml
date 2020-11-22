@@ -7,15 +7,19 @@
                         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
  <sitemap>
   <loc>https://tobias-budig.com/categories/ai.xml</loc>
-  <lastmod>2020-11-22T16:10:00Z</lastmod>
+  <lastmod>2020-11-22T16:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tobias-budig.com/categories/cat-tech.xml</loc>
-  <lastmod>2020-11-22T16:10:00Z</lastmod>
+  <lastmod>2020-11-22T16:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tobias-budig.com/categories/learning.xml</loc>
-  <lastmod>2020-11-22T16:10:00Z</lastmod>
+  <lastmod>2020-11-22T16:24:00Z</lastmod>
+ </sitemap>
+ <sitemap>
+  <loc>https://tobias-budig.com/categories/paper.xml</loc>
+  <lastmod>2020-11-22T16:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tobias-budig.com/categories/python.xml</loc>
@@ -23,14 +27,14 @@
  </sitemap>
  <sitemap>
   <loc>https://tobias-budig.com/categories/tech.xml</loc>
-  <lastmod>2020-11-22T16:10:00Z</lastmod>
+  <lastmod>2020-11-22T16:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tobias-budig.com/rss.xml</loc>
-  <lastmod>2020-11-22T16:10:00Z</lastmod>
+  <lastmod>2020-11-22T16:24:00Z</lastmod>
  </sitemap>
  <sitemap>
   <loc>https://tobias-budig.com/sitemap.xml</loc>
-  <lastmod>2020-11-22T16:10:00Z</lastmod>
+  <lastmod>2020-11-22T16:24:00Z</lastmod>
  </sitemap>
 </sitemapindex>
