@@ -182,7 +182,7 @@ VBox([widgets.Label("Select Image"), btn_upload, btn_run, out_pl, lbl_pred])
 result
 ```
 
-Now, we are done and have simple classifier to support dotors!
+Now, we are done and have a simple classifier to support dotors!
 
 
 See the repo here on [GitHub](https://github.com/tobiasbudig/x-ray-chest-analysis).
