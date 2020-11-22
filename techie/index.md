@@ -13,7 +13,7 @@ I'm a self-taught programmer since high school. In the beginning, I started lear
 
 # Academic background and computer science
 
-Until now, I have written a seminar paper on the topic "Privacy Preserving Machine Learning vs Explainable Machine Learning in Healthcare".
+Until now, I have written a seminar paper on the topic ["Privacy Preserving Machine Learning vs Explainable Machine Learning in Healthcare".](/posts/trade-off-exml-ppml/)
 
 # Stack
 
