@@ -153,4 +153,36 @@ result = f"Predictions: {pred}; Probability: {probs[pred_idx]:.04f}"
 result
 ```
 
+### Bonus
+
+This snippet creates a widget to upload a imgage which is than classified.
+
+```python
+from ipywidgets import VBox
+btn_upload = widgets.FileUpload()
+out_pl = widgets.Output()
+lbl_pred = widgets.Label()
+btn_run = widgets.Button(description="Classify")
+
+def on_click_classify(change):
+    img = PILImage.create(btn_upload.data[-1])
+    
+    out_pl.clear_output()
+    with out_pl: display(img.to_thumb(128, 128))
+    
+    #get predictions
+    pred, pred_idx, probs = learn_inf.predict(img)
+
+    
+    lbl_pred.value = f"Predictions: {pred}; Probability: {probs[pred_idx]:.04f}"
+    lbl_pred
+    
+btn_run.on_click(on_click_classify)
+VBox([widgets.Label("Select Image"), btn_upload, btn_run, out_pl, lbl_pred])
+result
+```
+
+Now, we are done and have a simple classifier to support dotors!
+
+
 See the repo here on [GitHub](https://github.com/tobiasbudig/x-ray-chest-analysis).
