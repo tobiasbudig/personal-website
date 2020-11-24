@@ -14,7 +14,7 @@ I believe in a world where technology serves humans.
 In my career so far, I have had much fun with scientific questions as well as their application to solving problems.
 
 Below is an overview of my work experience so far. If you'd like to see a traditional overview of my work experience,
-feel free to also take a look at [my resumé](/docs/201024_Tobias_Budig_CV-9) or [my Linkedin profile](https://www.linkedin.com/in/tobias-budig).
+feel free to also take a look at [my resumé](/docs/201024_Tobias_Budig_CV-9.pdf) or [my Linkedin profile](https://www.linkedin.com/in/tobias-budig).
 f you're more interested in my work's technological aspects, check out [Techie for a description of my stack and academic background](/techie) and [Maker containing my portfolio.](/portfolio)
 
 # CTO, MUN Command
